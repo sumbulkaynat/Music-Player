@@ -101,17 +101,17 @@ main{
 
 content{
     width:70%;
-    background-color:cornflowerblue;
-    min-width: 400px;
+    background-color:black;
+    flex-shrink: 10;
     
 }
 
 aside{
     width:26%;
     height:auto;
-    background-color:antiquewhite;
+    background-color:black;
     min-width: 280px;
-   
+   flex-shrink: 1;
 
 }
 
@@ -462,6 +462,8 @@ input[type=range]:focus::-ms-fill-upper {
 .show {display:block;}
 
 /*==============================Playlist===========================*/
+
+
 #playlist{
     color:white;
     position: relative;
@@ -502,10 +504,11 @@ input[type=range]:focus::-ms-fill-upper {
     
 }
 .song-d{
+    font-family: sans-serif;
     height:70px;
     position:relative;
     top:-15px;
-    left:-10px;
+   
     flex-shrink: 1;
 }
 
@@ -525,4 +528,125 @@ input[type=range]:focus::-ms-fill-upper {
 
 .heart:hover{
     color:red;
+}
+
+.flex-container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#latest-release{
+    color:white;
+    width:95%;
+    margin-top: 60px;
+}
+
+#latest-release h2{
+    text-align: center;
+    font-family: sans-serif;
+}
+#lr{
+    width: 40%;
+    margin-bottom: 10px;
+    min-width: 250px;
+    left:0px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    background-color: rgba(26, 26, 26, 0.29);
+}
+
+#lr .img-cover{
+    height:100px;
+    width:100px;
+    align-self: flex-start;
+}
+
+#lr .song-d{
+    top:0;
+}
+
+#lr .heart:hover{
+    color:darkgrey;
+}
+
+
+.pa{
+    flex-grow: 1;
+    flex-shrink: 1;
+    
+}
+
+#popular-artist{
+    color:white;
+    color:white;
+    width:100%;
+    margin-top: 60px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.pa-img{
+    height:100px;
+    width:100px;
+    
+}
+.pa-img img{
+    height:100%;
+    width:100%;
+    border-radius: 50%;
+    
+}
+
+.pa-name{
+    
+    width:100px;
+    font-size: 1.2rem;
+}
+
+
+/*---------------genere----------------*/
+
+#genere{
+    color:white;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.g-card{
+    background-image: linear-gradient( rgba(54, 54, 224, 0.72), rgba(232, 46, 31, 0.53) ), url(images/music6.jpg);
+    background-size:contain;
+    background-attachment: fixed;
+    height:150px;
+    width: 30%;
+    position: relative;
+}
+
+.g-card:hover{
+   background-color: aliceblue;
+    cursor: pointer;
+   
+}
+.g-card .text:hover{
+    color:rgba white;
+    font-family:cursive;
+   
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.84);
+     transition: text-shadow 0.5s;
+}
+.g-card .text{
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.84);
+    font-size: 1.2em;
+    text-align: center;
+    margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    
+}
+
+.heading{
+    color:white;
+    text-align: center;
 }
