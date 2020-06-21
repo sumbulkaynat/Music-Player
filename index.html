@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<head>
+    <title>Music Player</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="https://kit.fontawesome.com/0f7bd02f2a.js" crossorigin="anonymous"></script>
+    <script src="myscript.js"></script>
+
+</head>
+<body>
+    <header>
+        <div id="logo" class="header-div">
+            <img src="images/logo4.png" alt="logo">
+        </div>
+        <div id="fav" class="header-div">
+            <p>Favourites</p>
+        </div>
+        <div id="nav">
+            <div class="container">
+            
+            
+            <input placeholder='Search...' class='js-search' type="text">
+            <i class="fas fa-search" id="search-icon"></i>
+            <div id="bell">
+            
+            </div>
+            <i class="fas fa-bell" id="bell-icon"></i>
+            <div id="user" class="header-div">
+                <img id="user-image" src="images/Me-min.jpg" alt="user">
+            </div>
+
+            </div>
+        </div>
+    
+    </header>
+    <footer>
+            <div id="contents">
+              <div id="range">
+                <input type="range" id="range-val" value="46" min="0" max="143">
+
+              </div>
+              <div id="time">
+                <p>0:46</p>
+              </div>
+              <div id="buttons">
+                <i class="fa fa-step-backward fa-3x"></i>
+                <i class="fa fa-pause fa-3x step"></i>
+                <i class="fa fa-step-forward fa-3x"></i>
+              </div>
+              <div id="total-time">
+                <p>2:23</p>
+              </div>
+            </div>
+        
+        </footer>
+    <main>
+        <content>
+            <div id="carausel">
+                <div class="carousel-wrapper">
+                      <span id="item-1"></span>
+                      <span id="item-2"></span>
+                      <span id="item-3"></span>
+                      <div class="carousel-item item-1">
+<!--
+                        <h2>Item 1</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus   accumsan pretium dolor vel convallis. Aliquam erat volutpat. Maecenas lacus nunc, imperdiet sed mi et, finibus suscipit mi.</p>
+-->
+                        <a class="arrow arrow-prev" href="#item-3"></a>
+                        <a class="arrow arrow-next" href="#item-2"></a>
+                      </div>
+
+                      <div class="carousel-item item-2">
+<!--
+                        <h2>Item 2</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan pretium dolor vel convallis. Aliquam erat volutpat.</p>
+-->
+                        <a class="arrow arrow-prev" href="#item-1"></a>
+                        <a class="arrow arrow-next" href="#item-3"></a>
+                      </div>
+
+                      <div class="carousel-item item-3">
+<!--
+                        <h2>Item 3</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan pretium dolor vel convallis. Aliquam erat volutpat.</p>
+-->
+                        <a class="arrow arrow-prev" href="#item-2"></a>
+                        <a class="arrow arrow-next" href="#item-1"></a>
+                      </div>
+                </div>
+            </div>
+        </content>
+        <aside>
+            <div id="pl-header">
+                <div id="my-playlist">
+                    <span>My Playlist</span>
+                </div>
+                <div id="queue">
+                    <div class="dropdown">
+                      <button onclick="myFunction()" class="dropbtn">Queue <i class="fas fa-caret-down"></i></button>
+                      <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Playlist</a>
+                        <a href="#">Favourite Songs</a>
+                        <a href="#">Link 3</a>
+                      </div>
+                    </div>
+                </div>
+            
+            </div>
+            <div id="playlist">
+                <ul class="pl">
+                    <li> 
+                        <div class="song">
+                            <div class="img-cover">
+                                <img src="images/music3.jpg">
+                            </div>
+                            <div class="song-d">
+                                <div class="song-name">
+                                    <p>Song Name</p>
+                                </div>
+                                <div class="artist-name">
+                                    <p>Artist Name</p>
+                                </div>
+                            </div>
+                            <div class="heart">
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li> 
+                        <div class="song">
+                            <div class="img-cover">
+                                <img src="images/music3.jpg">
+                            </div>
+                            <div class="song-d">
+                                <div class="song-name">
+                                    <p>Song Name</p>
+                                </div>
+                                <div class="artist-name">
+                                    <p>Artist Name</p>
+                                </div>
+                            </div>
+                            <div class="heart">
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li> 
+                        <div class="song">
+                            <div class="img-cover">
+                                <img src="images/music3.jpg">
+                            </div>
+                            <div class="song-d">
+                                <div class="song-name">
+                                    <p>Song Name</p>
+                                </div>
+                                <div class="artist-name">
+                                    <p>Artist Name</p>
+                                </div>
+                            </div>
+                            <div class="heart">
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li> 
+                        <div class="song">
+                            <div class="img-cover">
+                                <img src="images/music3.jpg">
+                            </div>
+                            <div class="song-d">
+                                <div class="song-name">
+                                    <p>Song Name</p>
+                                </div>
+                                <div class="artist-name">
+                                    <p>Artist Name</p>
+                                </div>
+                            </div>
+                            <div class="heart">
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li> 
+                        <div class="song">
+                            <div class="img-cover">
+                                <img src="images/music3.jpg">
+                            </div>
+                            <div class="song-d">
+                                <div class="song-name">
+                                    <p>Song Name</p>
+                                </div>
+                                <div class="artist-name">
+                                    <p>Artist Name</p>
+                                </div>
+                            </div>
+                            <div class="heart">
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li> 
+                        <div class="song">
+                            <div class="img-cover">
+                                <img src="images/music3.jpg">
+                            </div>
+                            <div class="song-d">
+                                <div class="song-name">
+                                    <p>Song Name</p>
+                                </div>
+                                <div class="artist-name">
+                                    <p>Artist Name</p>
+                                </div>
+                            </div>
+                            <div class="heart">
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li> 
+                        <div class="song">
+                            <div class="img-cover">
+                                <img src="images/music3.jpg">
+                            </div>
+                            <div class="song-d">
+                                <div class="song-name">
+                                    <p>Song Name</p>
+                                </div>
+                                <div class="artist-name">
+                                    <p>Artist Name</p>
+                                </div>
+                            </div>
+                            <div class="heart">
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </div>
+                    </li>
+                    
+                </ul>
+            
+            </div>
+        
+        </aside>
+        
+    
+    </main>
+    
+
+</body>
