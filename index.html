@@ -35,26 +35,33 @@
     </header>
     
 <!-- =======================================================   footer    ===================================================================  -->
-    <footer>
-            <div id="contents">
-              <div id="range">
-                <input type="range" id="range-val" value="46" min="0" max="143">
+    <div class="container-f">
 
-              </div>
-              <div id="time">
-                <p>0:46</p>
-              </div>
-              <div id="buttons">
-                <i class="fa fa-step-backward fa-3x"></i>
-                <i class="fa fa-pause fa-3x step"></i>
-                <i class="fa fa-step-forward fa-3x"></i>
-              </div>
-              <div id="total-time">
-                <p>2:23</p>
-              </div>
+        <div class="text-container">
+            <div class="song-description">
+                <span class="text">A Thousand Years</span>
+                <span class="text">Christina Perri</span>
+                  
             </div>
-        
-        </footer>
+            <div class="song-controls">
+                <div class="playback_controls">
+                  <button onclick="skip('back')"><i class="fa fa-fast-backward"></i></button>
+                  <button onclick="playpause()"><i class="fa fa-play"></i><i class="fa fa-pause"></i></button>
+                  <button onclick="stop()"><i class="fa fa-stop"></i></button>
+                  <button onclick="skip('fwd')"><i class="fa fa-fast-forward"></i></button>
+                  </div>
+                  <br>
+                  <div id="seekbar">
+                  <input type="range" oninput="setPos(this.value)" id="seek" value="0" max="">
+                  </div>
+                  <br>
+                  <div class="volume_controls">
+                  <button id="mute" onclick="mute()"><i class="fa fa-volume-up"></i></button>
+                  <input type="range" id="volume" oninput="setVolume(this.value)" min="0" max="1" step="0.01" value="1">
+                  </div>
+            </div>
+          
+        </div>
 <!-- =======================================================   main body   ===================================================================  -->
     <main>
 <!--   ---------------------------------------------   left  content     ----------------------------------------------------------------- -->
@@ -164,7 +171,7 @@
                     <h2>Popular Artist</h2>
                 </div>
                 
-        <!--   ------------------------------------------     start of popular list    ----------------------------------------- -->
+        <!--   ------------------------------------------     start of popular artist list    ----------------------------------------- -->
                 <div id="pa-container" class="flex-container">
                     
  
@@ -243,8 +250,8 @@
             
             
             <div class="heading">
-                    <h2>Mood</h2>
-                </div>
+                <h2>Mood</h2>
+            </div>
             <div id="genere" class="flex-container">
                 
                 <div class="g-card">
@@ -293,83 +300,289 @@
             
             
             
-    <!-- ================================================================== -->
-            <div id="latest-release">
+    <!-- ===============================  latest language wise =================================== -->
+            
+    <!-- ------------------------------------English----------------------------------------- -->        
+            
+            <div id="latest-english" class="latest-language">
                 <div class="heading">
-                    <h2>Latest Release</h2>
+                    <h2>Latest English</h2>
                 </div>
                 <div class="flex-container">
-                    <div id="lr" class="song">
-                        <div class="img-cover">
+                    <div class="ll">
+                        <div id="ll-img" class="pa-img">
                             <img src="images/music3.jpg">
                         </div>
-                        <div class="song-d">
-                            <div class="song-name">
-                                <p>Song Name</p>
-                            </div>
-                            <div class="artist-name">
-                                <p>Artist Name</p>
-                            </div>
+                        <div class="pa-name">
+                            <p>Name</p>
+                        
                         </div>
-                        <div class="heart">
-                            <i class="fas fa-ellipsis-h"></i>
+                        <div id="ll-date" class="pa-name">
+                            <p>Aug 26, 2020</p>
                         </div>
+                    
                     </div>
                     
-                    <div id="lr" class="song">
-                        <div class="img-cover">
+                    <div class="ll">
+                        <div id="ll-img" class="pa-img">
                             <img src="images/music3.jpg">
                         </div>
-                        <div class="song-d">
-                            <div class="song-name">
-                                <p>Song Name</p>
-                            </div>
-                            <div class="artist-name">
-                                <p>Artist Name</p>
-                            </div>
+                        <div class="pa-name">
+                            <p>Name</p>
+                        
                         </div>
-                        <div class="heart">
-                            <i class="fas fa-ellipsis-h"></i>
+                        <div id="ll-date" class="pa-name">
+                            <p>Aug 26, 2020</p>
                         </div>
+                    
                     </div>
                     
-                    <div id="lr" class="song">
-                        <div class="img-cover">
+                    <div class="ll">
+                        <div id="ll-img" class="pa-img">
                             <img src="images/music3.jpg">
                         </div>
-                        <div class="song-d">
-                            <div class="song-name">
-                                <p>Song Name</p>
-                            </div>
-                            <div class="artist-name">
-                                <p>Artist Name</p>
-                            </div>
+                        <div class="pa-name">
+                            <p>Name</p>
+                        
                         </div>
-                        <div class="heart">
-                            <i class="fas fa-ellipsis-h"></i>
+                        <div id="ll-date" class="pa-name">
+                            <p>Aug 26, 2020</p>
                         </div>
+                    
                     </div>
                     
-                    <div id="lr" class="song">
-                        <div class="img-cover">
+                    <div class="ll">
+                        <div id="ll-img" class="pa-img">
                             <img src="images/music3.jpg">
                         </div>
-                        <div class="song-d">
-                            <div class="song-name">
-                                <p>Song Name</p>
-                            </div>
-                            <div class="artist-name">
-                                <p>Artist Name</p>
-                            </div>
+                        <div class="pa-name">
+                            <p>Name</p>
+                        
                         </div>
-                        <div class="heart">
-                            <i class="fas fa-ellipsis-h"></i>
+                        <div id="ll-date" class="pa-name">
+                            <p>Aug 26, 2020</p>
                         </div>
+                    
                     </div>
+                    
+                    <div class="ll">
+                        <div id="ll-img" class="pa-img">
+                            <img src="images/music3.jpg">
+                        </div>
+                        <div class="pa-name">
+                            <p>Name</p>
+                        
+                        </div>
+                        <div id="ll-date" class="pa-name">
+                            <p>Aug 26, 2020</p>
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="ll">
+                        <div id="ll-img" class="pa-img">
+                            <img src="images/music3.jpg">
+                        </div>
+                        <div class="pa-name">
+                            <p>Name</p>
+                        </div>
+                        <div id="ll-date" class="pa-name">
+                            <p>Aug 26, 2020</p>
+                        </div>
+                    
+                    </div>
+                    
                 </div>
-               
+            
             </div>
             
+    <!-- ------------------------------------Hindi----------------------------------------- --> 
+            <div id="latest-hindi" class="latest-language">
+                <div class="heading">
+                    <h2>Latest Hindi</h2>
+                </div>
+                <div class="flex-container">
+                    <div class="ll">
+                        <div id="ll-img" class="pa-img">
+                            <img src="images/music3.jpg">
+                        </div>
+                        <div class="pa-name">
+                            <p>Name</p>
+                        
+                        </div>
+                        <div id="ll-date" class="pa-name">
+                            <p>Aug 26, 2020</p>
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="ll">
+                        <div id="ll-img" class="pa-img">
+                            <img src="images/music3.jpg">
+                        </div>
+                        <div class="pa-name">
+                            <p>Name</p>
+                        
+                        </div>
+                        <div id="ll-date" class="pa-name">
+                            <p>Aug 26, 2020</p>
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="ll">
+                        <div id="ll-img" class="pa-img">
+                            <img src="images/music3.jpg">
+                        </div>
+                        <div class="pa-name">
+                            <p>Name</p>
+                        
+                        </div>
+                        <div id="ll-date" class="pa-name">
+                            <p>Aug 26, 2020</p>
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="ll">
+                        <div id="ll-img" class="pa-img">
+                            <img src="images/music3.jpg">
+                        </div>
+                        <div class="pa-name">
+                            <p>Name</p>
+                        
+                        </div>
+                        <div id="ll-date" class="pa-name">
+                            <p>Aug 26, 2020</p>
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="ll">
+                        <div id="ll-img" class="pa-img">
+                            <img src="images/music3.jpg">
+                        </div>
+                        <div class="pa-name">
+                            <p>Name</p>
+                        
+                        </div>
+                        <div id="ll-date" class="pa-name">
+                            <p>Aug 26, 2020</p>
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="ll">
+                        <div id="ll-img" class="pa-img">
+                            <img src="images/music3.jpg">
+                        </div>
+                        <div class="pa-name">
+                            <p>Name</p>
+                        
+                        </div>
+                        <div id="ll-date" class="pa-name">
+                            <p>Aug 26, 2020</p>
+                        </div>
+                    
+                    </div>
+                    
+                </div>
+            
+            </div>
+            
+        <!-- ------------------------------------Hindi----------------------------------------- --> 
+            <div id="latest-hindi" class="latest-language">
+                <div class="heading">
+                    <h2>Latest Tamil</h2>
+                </div>
+                <div class="flex-container">
+                    <div class="ll">
+                        <div id="ll-img" class="pa-img">
+                            <img src="images/music3.jpg">
+                        </div>
+                        <div class="pa-name">
+                            <p>Name</p>
+                        
+                        </div>
+                        <div id="ll-date" class="pa-name">
+                            <p>Aug 26, 2020</p>
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="ll">
+                        <div id="ll-img" class="pa-img">
+                            <img src="images/music3.jpg">
+                        </div>
+                        <div class="pa-name">
+                            <p>Name</p>
+                        
+                        </div>
+                        <div id="ll-date" class="pa-name">
+                            <p>Aug 26, 2020</p>
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="ll">
+                        <div id="ll-img" class="pa-img">
+                            <img src="images/music3.jpg">
+                        </div>
+                        <div class="pa-name">
+                            <p>Name</p>
+                        
+                        </div>
+                        <div id="ll-date" class="pa-name">
+                            <p>Aug 26, 2020</p>
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="ll">
+                        <div id="ll-img" class="pa-img">
+                            <img src="images/music3.jpg">
+                        </div>
+                        <div class="pa-name">
+                            <p>Name</p>
+                        
+                        </div>
+                        <div id="ll-date" class="pa-name">
+                            <p>Aug 26, 2020</p>
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="ll">
+                        <div id="ll-img" class="pa-img">
+                            <img src="images/music3.jpg">
+                        </div>
+                        <div class="pa-name">
+                            <p>Name</p>
+                        
+                        </div>
+                        <div id="ll-date" class="pa-name">
+                            <p>Aug 26, 2020</p>
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="ll">
+                        <div id="ll-img" class="pa-img">
+                            <img src="images/music3.jpg">
+                        </div>
+                        <div class="pa-name">
+                            <p>Name</p>
+                        
+                        </div>
+                        <div id="ll-date" class="pa-name">
+                            <p>Aug 26, 2020</p>
+                        </div>
+                    
+                    </div>
+                    
+                </div>
+            
+            </div>
             
 
         </content>
@@ -385,7 +598,7 @@
                       <div id="myDropdown" class="dropdown-content">
                         <a href="#">Playlist</a>
                         <a href="#">Favourite Songs</a>
-                        <a href="#">Link 3</a>
+                        
                       </div>
                     </div>
                 </div>
