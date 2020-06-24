@@ -334,6 +334,7 @@ aside{
 .heart{
     position: relative;
     top:20px;
+    z-index: 10;
 }
 
 .song-name{
@@ -618,4 +619,34 @@ div.feature a {
     background-color: #FFF; /* Fix to make div clickable in IE */
     opacity: 0; /* Fix to make div clickable in IE */
     filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+
+.lightbox {
+    position: fixed absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    transition: all 1s ease-in-out;
+}
+
+#content-box {
+    background-color: black;
+    overflow: hidden;
+    min-width: 300px;
+    position: relative;
+    left: -20px;
+}
+
+.lightbox:target {
+    height: 100%;
+    width: 100%;
+}
+
+#playlist a{
+    color: white;
+    text-decoration: none;
 }

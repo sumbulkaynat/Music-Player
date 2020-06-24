@@ -2,7 +2,7 @@ var song = new Audio;
 var muted = false;
 var vol = 1;
 song.type = 'audio/mpeg';
-song.src = 'audio/song1.mp3';//Audio file source url
+song.src = 'audio/in-the-end.mp3';//Audio file source url
 
 function skip(time) {
    if (time == 'back') {
